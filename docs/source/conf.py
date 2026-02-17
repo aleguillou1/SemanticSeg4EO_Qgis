@@ -6,8 +6,8 @@ import sys
 
 # -- Project information -------------------------------------------------------
 project = 'SemanticSeg4EO'
-copyright = '2024, SemanticSeg4EO Team'
-author = 'SemanticSeg4EO Team'
+copyright = '2026, Adrien Le Guillou'
+author = 'Adrien Le Guillou'
 release = '1.1.0'
 version = '1.1'
 
