@@ -36,33 +36,6 @@ semanticseg4eo-docs/
 │           └── changelog.rst
 ```
 
-## Building Locally
-
-1. Install Sphinx dependencies:
-
-```bash
-pip install -r docs/requirements.txt
-```
-
-2. Build the HTML docs:
-
-```bash
-cd docs
-make html
-```
-
-3. Open `docs/build/html/index.html` in your browser.
-
-## Deploying to ReadTheDocs
-
-1. Push this repository to GitHub.
-2. Go to [readthedocs.org](https://readthedocs.org) and import your project.
-3. ReadTheDocs will automatically use `.readthedocs.yaml` to build the docs.
-
-## Adding Screenshots
-
-Place your screenshots in `docs/source/_images/`.
-See `docs/source/_images/README.md` for the full list of expected image files.
 
 ## License
 
