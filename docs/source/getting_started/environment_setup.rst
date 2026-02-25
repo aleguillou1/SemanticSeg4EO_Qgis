@@ -36,10 +36,7 @@ Configuring the Plugin
 When you first open SemanticSeg4EO, the **environment status bar** at the top of
 the dialog will show *"No Python environment configured"*.
 
-.. figure:: ../_images/env_status_bar.png
-   :alt: Environment status bar
-   :align: center
-   :width: 80%
+
 
    *The environment status bar before configuration.*
 
