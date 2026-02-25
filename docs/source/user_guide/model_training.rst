@@ -50,7 +50,7 @@ The **Basic Parameters** sub-tab is the main interface for most users.
 Parameters are split into two columns: **Model** (left) and
 **Optimization + Regularization** (right).
 
-.. figure:: ../_images/training_basic_subtab.png
+.. figure:: ../_images/basic_param.png
    :alt: Basic Parameters sub-tab
    :align: center
    :width: 90%
@@ -224,7 +224,7 @@ Advanced Parameters
 The **Advanced Parameters** sub-tab exposes fine-grained control over model
 regularization, loss function hyperparameters, and cross-validation.
 
-.. figure:: ../_images/training_advanced_subtab.png
+.. figure:: ../_images/advanced_param.png
    :alt: Advanced Parameters sub-tab
    :align: center
    :width: 90%
