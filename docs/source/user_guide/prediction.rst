@@ -6,7 +6,7 @@ Prediction
 The **Prediction** tab applies a trained model to a new large satellite image,
 producing a georeferenced segmentation map as a GeoTIFF.
 
-.. figure:: ../_images/prediction_tab.png
+.. figure:: ../_images/pred_table.png
    :alt: Prediction tab
    :align: center
    :width: 90%
