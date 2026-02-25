@@ -58,10 +58,10 @@ After enabling the plugin, you will see a new **SemanticSeg4EO** entry in:
 - The **Raster** menu
 - The QGIS toolbar (icon |icon|)
 
-.. |icon| image:: ../_images/icon_small.png
+.. |icon| image:: ../_images/icon224.png
    :height: 20px
 
-.. .. [INSERT ICON IMAGE]
+.. ..
 
 
 Step 2 — Create the External Python Environment
