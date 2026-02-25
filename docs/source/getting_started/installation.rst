@@ -33,7 +33,7 @@ Step 1 — Install the QGIS Plugin
 ---------------------------------
 
 1. Download ``SemanticSeg4EO.zip`` from the
-   `GitHub releases page <https://github.com/aleguillou1/SemanticSeg4EO/releases>`_.
+   `GitHub releases page <https://github.com/aleguillou1/SemanticSeg4EO_Qgis/tree/main/Plug-in>`_.
 
 2. In QGIS, open **Plugins → Manage and Install Plugins**.
 
