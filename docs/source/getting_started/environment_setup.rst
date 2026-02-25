@@ -287,7 +287,7 @@ A successful verification looks like:
 
    ✔ Environment is ready!
 
-.. figure:: ../_images/env_config_verify.png
+.. figure:: ../_images/chercherenv.png
    :alt: Verification output
    :align: center
    :width: 70%
@@ -297,7 +297,7 @@ A successful verification looks like:
 After verification, click **Save & Close**. The status bar updates to show
 the environment type and Python path in green.
 
-.. figure:: ../_images/env_status_configured.png
+.. figure:: ../_images/vert.png
    :alt: Configured environment status
    :align: center
    :width: 80%
