@@ -7,7 +7,7 @@ The **Model Training** tab lets you configure and launch training of a deep lear
 segmentation model on the patches extracted in the previous step.
 Parameters are organized into **Basic** and **Advanced** sub-tabs.
 
-.. figure:: ../_images/training_tab_overview.png
+.. figure:: ../_images/subset_train,.png
    :alt: Model Training tab
    :align: center
    :width: 90%
