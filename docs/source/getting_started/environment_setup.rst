@@ -72,7 +72,7 @@ options on a single screen:
    list; select one and it is applied.
 3. **Type or paste a path** — enter the full path to the Python executable manually.
 
-.. figure:: ../_images/env_config_dialog.png
+.. figure:: ../_images/1.png
    :alt: Environment configuration dialog
    :align: center
    :width: 70%
