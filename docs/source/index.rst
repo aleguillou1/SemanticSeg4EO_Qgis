@@ -7,7 +7,7 @@ SemanticSeg4EO — QGIS Plugin Documentation
    :alt: SemanticSeg4EO Banner
    :align: center
 
-.. .. figure:: ../_images/logo$.png
+.. figure:: ../_images/logo$.png
 
 |
 
