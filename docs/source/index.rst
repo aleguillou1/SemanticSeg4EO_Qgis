@@ -83,7 +83,7 @@ SemanticSeg4EO is designed for Earth Observation (EO) professionals who need to:
 All processing happens in a clean external Python environment, communicating with QGIS
 via temporary JSON and subprocess calls.
 
-.. figure:: _images/architecture_diagram.png
+.. figure:: _images/architecture.png
    :alt: Plugin Architecture
    :align: center
    :width: 80%
