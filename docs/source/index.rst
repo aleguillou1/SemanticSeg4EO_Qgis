@@ -7,9 +7,6 @@ SemanticSeg4EO — QGIS Plugin Documentation
    :alt: SemanticSeg4EO Banner
    :align: center
 
-.. figure:: ../_images/logo$.png
-
-|
 
 **SemanticSeg4EO** is a QGIS plugin for semantic segmentation of satellite and aerial imagery
 using deep learning — all from within QGIS, without breaking your QGIS Python environment.
