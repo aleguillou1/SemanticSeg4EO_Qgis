@@ -34,7 +34,9 @@ A QGIS plugin for semantic segmentation of Earth Observation imagery using deep 
 
 ### 1. Install the plugin
 
-Download the latest **`SemanticSeg4EO_QGIS.zip`** from the [Releases](../../releases) page.
+📥 **[Download SemanticSeg4Eo_QGIS.zip](https://github.com/aleguillou1/SemanticSeg4EO_Qgis/tree/main/Plug-in)**
+
+Click on SemanticSeg4EO_Qgis.zip -> Download raw file.
 
 In QGIS: **Plugins → Manage and Install Plugins → Install from ZIP** → select the file → **Install**.
 
@@ -79,9 +81,10 @@ Full documentation is available in the [`docs/`](docs/) folder:
 
 ```
 .
-├── SemanticSeg4EO_QGIS.zip        ← installable plugin (download from Releases)
-├── requirements_external.txt       ← dependencies for the external environment
+├── Plug-in/
+│   └── SemanticSeg4Eo_QGIS.zip    ← installable QGIS plugin
 ├── docs/                           ← full documentation (RST)
+├── requirements_external.txt       ← dependencies for the external environment
 ├── LICENSE
 └── README.md
 ```
