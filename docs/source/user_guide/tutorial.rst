@@ -220,12 +220,18 @@ reconstruction.
 .. figure:: ../_images/prediction_2.png
    :alt: Prediction result
    :align: center
+   :width: 50%
+
+   *Results of logs after predictions.*
+
+
+
+.. figure:: ../_images/result_final.png
+   :alt: Prediction result
+   :align: center
    :width: 90%
 
-   *Prediction result on the independent image, displayed in QGIS alongside the
-   original BD Ortho IRC.*
-
-
+   *Prediction result on the independent image, displayed in QGIS alongside the original BD Ortho IRC.*
 Summary
 ---------
 
