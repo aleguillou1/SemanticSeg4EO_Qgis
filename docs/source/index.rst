@@ -50,6 +50,7 @@ using deep learning — all from within QGIS, without breaking your QGIS Python 
    user_guide/patch_extraction
    user_guide/model_training
    user_guide/prediction
+   user_guide/tutorial
 
 .. toctree::
    :maxdepth: 2
