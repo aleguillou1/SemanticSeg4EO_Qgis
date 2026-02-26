@@ -69,9 +69,9 @@ Set the extraction parameters:
    * - Data type
      - ``int16``
    * - Train / Val / Test ratio
-     - 0.75 / 0.15 / 0.10
+     - 0.70 / 0.20 / 0.10
 
-.. figure:: ../_images/Capture d’écran 2026-02-25 162938.png
+.. figure:: ../_images/patch_extractionn.png
    :alt: Patch extraction parameters
    :align: center
    :width: 80%
@@ -126,7 +126,9 @@ Configure the training:
    * - Number of classes
      - ``5``
    * - Architecture
-     - ``segformer-b2``
+     - ``U-Net``
+   * - Encoder
+     - ``Resnet-34``
    * - Epochs
      - as needed (see training curves)
    * - Device
@@ -140,10 +142,11 @@ Configure the training:
    *Model training tab configured for U-Net + Resnet-34, multi-class (5 classes).*
 
 .. figure:: ../_images/train2.png
-   :alt: Training parameters
+   :alt: Training advanced parameters
    :align: center
    :width: 80%
- *Model training advanced tab configured for U-Net + Resnet-34, multi-class (5 classes).*
+
+   *Advanced training parameters.*
 
 Click **Run Training**. The plugin launches the training in the external
 environment. Progress and metrics are displayed in the log panel.
@@ -159,20 +162,37 @@ Once training is complete, the output directory contains:
    ├── model_metrics.json           ← detailed metrics history
    └── model_training_plot.png      ← training curves
 
-.. figure:: ../_images/tuto_training_results.png
+.. figure:: ../_images/result.png
    :alt: Training results
    :align: center
-   :width: 90%
+   :width: 70%
 
    *Training results: metrics summary and training curves.*
 
-.. figure:: ../_images/tuto_training_plot.png
+.. figure:: ../_images/unet_training_curves.png
    :alt: Training curves
    :align: center
    :width: 70%
 
    *Loss and IoU curves over the training epochs.*
 
+
+.. warning::
+   The results presented in this tutorial were obtained using a **small subset**
+   (1 405 patches of 224 × 224 × 3 pixels) for demonstration purposes only.
+   Performance can be substantially improved by:
+
+   - **Increasing the training area** — adding more images and labels to provide
+     the model with a larger and more diverse set of training pixels
+   - **Tuning hyperparameters** — adjusting learning rate, batch size, scheduler,
+     loss function, augmentation level, etc.
+   - **Trying different architectures or encoders** — e.g. switching from
+     SegFormer-B2 to a larger variant, or using a pretrained ResNet-101 backbone
+   - **Enabling advanced options** — class weighting, k-fold cross-validation,
+     mixed-precision training, or stronger data augmentation
+
+   This tutorial is intended as a **starting point** to familiarise yourself with
+   the SemanticSeg4EO workflow, not as an optimised benchmark.
 
 Step 3 — Prediction on an Independent Image
 ----------------------------------------------
@@ -187,7 +207,7 @@ Navigate to the **Prediction** tab and configure:
 - **Input image:** the independent BD Ortho IRC scene
 - **Output:** path for the prediction GeoTIFF
 
-.. figure:: ../_images/tuto_prediction_params.png
+.. figure:: ../_images/prediction_1.png
    :alt: Prediction parameters
    :align: center
    :width: 80%
@@ -197,7 +217,7 @@ Navigate to the **Prediction** tab and configure:
 Click **Run Prediction**. The plugin performs patch-based inference with seamless
 reconstruction.
 
-.. figure:: ../_images/tuto_prediction_result.png
+.. figure:: ../_images/prediction_2.png
    :alt: Prediction result
    :align: center
    :width: 90%
@@ -224,4 +244,4 @@ model's ability to generalise beyond the training area.
    trained model, and predictions) are freely available for download on Zenodo so
    that you can reproduce this tutorial exactly:
 
-   📦 `https://doi.org/10.5281/zenodo.XXXXXXX <https://doi.org/10.5281/zenodo.XXXXXXX>`_
+   📦 `https://zenodo.org/records/18784043 <https://zenodo.org/records/18784043>`_
