@@ -12,7 +12,7 @@ patches, trained model and predictions) are freely available on Zenodo:
 
 .. TODO:: Insert Zenodo link below once published.
 
-📦 **Dataset & results:** `https://doi.org/10.5281/zenodo.XXXXXXX <https://doi.org/10.5281/zenodo.XXXXXXX>`_
+📦 **Dataset & results:** `10.5281/zenodo.18784043 <10.5281/zenodo.18784043>`_
 
 .. contents:: In this tutorial
    :local:
