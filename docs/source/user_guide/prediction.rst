@@ -142,14 +142,6 @@ by a 2D Gaussian kernel before being merged into the final image. This means:
 - Abrupt transitions between patches are smoothed out
 - The final result has no visible "grid" pattern
 
-.. figure:: ../_images/gaussian_blending_comparison.png
-   :alt: Gaussian blending comparison
-   :align: center
-   :width: 75%
-
-   *Left: no blending (grid artifacts visible). Right: Gaussian blending (seamless).*
-
-.. .. [INSERT COMPARISON IMAGE: blending on/off]
 
 Gaussian blending is always recommended unless you specifically need hard patch boundaries.
 
@@ -172,14 +164,6 @@ When **Add result to QGIS** is checked, the output is automatically added as
 a raster layer to the current project with a default style. You can then apply
 your own colour ramp in the layer properties.
 
-.. figure:: ../_images/prediction_result_qgis.png
-   :alt: Prediction result in QGIS
-   :align: center
-   :width: 85%
-
-   *Segmentation result loaded automatically in QGIS.*
-
-.. .. [INSERT SCREENSHOT: QGIS with predicted segmentation result loaded]
 
 
 Tips for Good Predictions
