@@ -10,7 +10,6 @@ help you get familiar with the tool.
 All data used and produced in this tutorial (raw imagery, labels, grid, extracted
 patches, trained model and predictions) are freely available on Zenodo:
 
-.. TODO:: Insert Zenodo link below once published.
 
 📦 **Dataset & results:** `10.5281/zenodo.18784043 <10.5281/zenodo.18784043>`_
 
@@ -37,7 +36,7 @@ This tutorial uses the following inputs:
    * - **Grid**
      - Polygon shapefile defining the patch locations over the study area
 
-.. figure:: ../_images/tuto_input_data.png
+.. figure:: ../_images/img_label.png
    :alt: Input data overview
    :align: center
    :width: 90%
@@ -72,7 +71,7 @@ Set the extraction parameters:
    * - Train / Val / Test ratio
      - 0.75 / 0.15 / 0.10
 
-.. figure:: ../_images/tuto_patch_extraction_params.png
+.. figure:: ../_images/Capture d’écran 2026-02-25 162938.png
    :alt: Patch extraction parameters
    :align: center
    :width: 80%
@@ -109,7 +108,7 @@ Select the dataset:
 
 - **Dataset directory:** the ``Patch/`` folder created in Step 1
 
-.. figure:: ../_images/tuto_dataset_folder.png
+.. figure:: ../_images/testtrain.png
    :alt: Dataset folder structure
    :align: center
    :width: 70%
@@ -133,12 +132,18 @@ Configure the training:
    * - Device
      - ``cuda`` (GPU) or ``cpu``
 
-.. figure:: ../_images/tuto_training_params.png
+.. figure:: ../_images/train1.png
    :alt: Training parameters
    :align: center
    :width: 80%
 
-   *Model training tab configured for SegFormer-B2, multi-class (5 classes).*
+   *Model training tab configured for U-Net + Resnet-34, multi-class (5 classes).*
+
+.. figure:: ../_images/train2.png
+   :alt: Training parameters
+   :align: center
+   :width: 80%
+ *Model training advanced tab configured for U-Net + Resnet-34, multi-class (5 classes).*
 
 Click **Run Training**. The plugin launches the training in the external
 environment. Progress and metrics are displayed in the log panel.
