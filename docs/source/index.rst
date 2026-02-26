@@ -46,7 +46,6 @@ using deep learning — all from within QGIS, without breaking your QGIS Python 
    :caption: User Guide
    :hidden:
 
-   user_guide/index
    user_guide/patch_extraction
    user_guide/model_training
    user_guide/prediction
