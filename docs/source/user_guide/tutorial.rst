@@ -11,7 +11,7 @@ All data used and produced in this tutorial (raw imagery, labels, grid, extracte
 patches, trained model and predictions) are freely available on Zenodo:
 
 
-📦 **Dataset & results:** `10.5281/zenodo.18784043 <10.5281/zenodo.18784043>`_
+📦 **Dataset & results:** `https://zenodo.org/records/18784043 <https://zenodo.org/records/18784043>`_
 
 .. contents:: In this tutorial
    :local:
