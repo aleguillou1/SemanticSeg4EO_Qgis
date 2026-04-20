@@ -1,0 +1,43 @@
+# environment.yml
+# Conda environment for SemanticSeg4EO external Python (training, prediction, patch extraction)
+# Create with: conda env create -f environment.yml
+# Activate: conda activate seg4eo
+
+name: semanticseg4EO
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  # Geospatial core
+  - rasterio>=1.3.0
+  - geopandas>=0.14.0
+  - fiona>=1.9.0
+  - pyproj>=3.5.0
+  - shapely>=2.0.0
+  # Image processing
+  - opencv>=4.8.0
+  - scipy>=1.11.0
+  - matplotlib>=3.7.0
+  - tqdm>=4.66.0
+  # Deep learning base (PyTorch via pip for CUDA)
+  - pip:
+    # PyTorch with CUDA 11.8 (adjust to your CUDA version)
+    # For CUDA 12.1, use: --index-url https://download.pytorch.org/whl/cu121
+    - torch>=2.0.0
+    - torchvision>=0.15.0
+    # Model libraries
+    - segmentation-models-pytorch>=0.3.3
+    - transformers>=4.30.0
+    - timm>=0.9.0
+    # Additional utilities
+    - scikit-learn>=1.3.0
+    - tifffile>=2023.0.0
+    - imagecodecs>=2023.0.0
+    # For advanced augmentation (elastic deform, etc.)
+    - scikit-image>=0.21.0
+    - albumentations>=1.3.0  # optional but useful
+    # For metrics and plots
+    - pandas>=2.0.0
+    - seaborn>=0.12.0  # optional for nicer plots
