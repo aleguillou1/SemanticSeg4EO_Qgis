@@ -1,20 +1,38 @@
-# SemanticSeg4EO — QGIS Plugin
+#  SemanticSeg4EO — QGIS Plugin
 
-A QGIS plugin for semantic segmentation of Earth Observation imagery using deep learning.
+[![QGIS](https://img.shields.io/badge/QGIS-3.16+-green.svg)](https://qgis.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
 
-> **Safe by design:** all processing runs in an external Python environment via subprocess. Nothing is installed into QGIS — your installation stays clean and stable.
+> **A unified framework for semantic segmentation of Earth Observation imagery — directly inside QGIS.**
+
+SemanticSeg4EO provides a complete **end-to-end pipeline**, from dataset preparation to large-scale inference, while keeping your QGIS environment clean and stable.
 
 ---
 
-## Features
+## Key Features
 
-- **Patch extraction** from large satellite images (single & batch mode, georeferenced GeoTIFF output)
-- **Model training** — 20+ architectures: U-Net, DeepLabV3+, SegFormer, HRNet, SwinUNet, ConvNeXt…
-- **Large-image prediction** with seamless reconstruction, Gaussian blending and confidence maps
-- Binary and multi-class segmentation
-- K-Fold cross-validation, class weighting, mixed-precision training
+- 🔄 **End-to-End Workflow**  
+  Patch extraction → Training → Large-scale inference
 
-## Architecture
+- 🧠 **State-of-the-Art Models**  
+  20+ architectures supported:
+  *U-Net, DeepLabV3+, SegFormer, HRNet, SwinUNet, ConvNeXt, ...*
+
+- 🛰️ **Advanced Inference**
+  - Gaussian blending for seamless mosaics  
+  - Confidence map generation  
+
+- 🎓 **Research-Grade Tools**
+  - K-Fold cross-validation  
+  - Class weighting  
+  - Automatic Mixed Precision (AMP)
+
+---
+
+## 🧩 Architecture
+
+The plugin cleanly separates GIS interaction from heavy deep learning workloads:
 
 ```
 ┌──────────────────────────────────────────────────┐
@@ -30,83 +48,70 @@ A QGIS plugin for semantic segmentation of Earth Observation imagery using deep 
 └──────────────────────────────────────────────────┘
 ```
 
-## Quick Start
 
-### 1. Install the plugin
+> 💡 **Stability by Design**  
+> All heavy processing runs in an isolated Python environment → no dependency conflicts with QGIS.
 
-📥 **[Download SemanticSeg4Eo_QGIS.zip](https://github.com/aleguillou1/SemanticSeg4EO_Qgis/tree/main/Plug-in)**
+---
 
-Click on SemanticSeg4EO_Qgis.zip -> Download raw file.
+## Getting Started
 
-In QGIS: **Plugins → Manage and Install Plugins → Install from ZIP** → select the file → **Install**.
+### 1. Install the Plugin
 
-### 2. Create an external Python environment
+1. Download `SemanticSeg4EO.zip` from this repository  
+2. Open QGIS  
+3. Go to:  
+   **Plugins → Manage and Install Plugins → Install from ZIP**  
+4. Select the `.zip` file and click **Install**
+
+> ℹ️ The full source code is available in `src/` for transparency and reproducibility.
+
+---
+
+### 2. Set Up the Python Environment
+
+We recommend **Conda**:
 
 ```bash
-# Conda (recommended)
+# Create environment
 conda create -n semanticseg4eo python=3.10 -y
 conda activate semanticseg4eo
 
-# Install PyTorch (pick ONE)
-pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu      # CPU
-pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118    # CUDA 11.8
-pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121    # CUDA 12.1
+# Install PyTorch (example: CUDA 12.1)
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
 
-# Install the rest
+# Install remaining dependencies
 pip install -r requirements_external.txt
 ```
+Important: Always install PyTorch first to match your specific hardware (CPU or CUDA version). Check pytorch.org for the correct command.
+3. Connect the Plugin
 
-> See `requirements_external.txt` in this repo for the full dependency list.  
-> **Always install PyTorch first** — the requirements file does not include it because the correct build depends on your hardware.
+3. Connect the Plugin
+Open SemanticSeg4EO in QGIS
+Click "Browse python..." (bottom status bar)
+Select:
+python.exe (Windows)
+bin/python (Linux/macOS)
 
-### 3. Point the plugin to your Python
+✅ Optional: Use "Configure Environment" for automatic Conda detection.
 
-Open SemanticSeg4EO in QGIS and click **Browse python…** in the status bar.  
-Navigate to `python.exe` (Windows) or `bin/python` (Linux/macOS) inside your environment — done.
+Project Structure
 
-Alternatively, click **Configure Environment** for auto-detection of installed Conda/venv environments.
-
-## Documentation
-
-Full documentation is available in the [`docs/`](docs/) folder:
-
-| Page | Description |
-|------|-------------|
-| [Environment Setup](docs/environment_setup.rst) | How to create, configure and verify the external environment |
-| [Patch Extraction](docs/patch_extraction.rst) | Single & batch extraction, parameters, CRS validation |
-| [Model Training](docs/model_training.rst) | Architectures, losses, augmentation, k-fold, advanced options |
-| [Prediction](docs/prediction.rst) | Large-image inference, Gaussian blending, confidence maps |
-
-## Repository Contents
-
-```
-.
-├── Plug-in/
-│   └── SemanticSeg4Eo_QGIS.zip    ← installable QGIS plugin
-├── docs/                           ← full documentation (RST)
-├── requirements_external.txt       ← dependencies for the external environment
-├── LICENSE
-└── README.md
+```text
+├── src/                          # Full Python source code
+├── SemanticSeg4EO.zip            # QGIS plugin package
+├── docs/                         # Documentation & guides
+└── requirements_external.txt     # External environment dependencies
 ```
 
-## Requirements
+Citation
 
-| Side | What you need |
-|------|---------------|
-| **QGIS** | QGIS ≥ 3.16 — nothing else |
-| **External env** | Python ≥ 3.8, PyTorch ≥ 1.10, numpy < 2, rasterio, geopandas, opencv-python, tifffile, imagecodecs, segmentation-models-pytorch, scipy, scikit-learn, matplotlib, tqdm |
-| **Optional** | `transformers` (SegFormer), `timm` (HRNet, SwinUNet, ConvNeXt) |
+If you use this software in your research, please cite:
 
-## License
-
-MIT — see [LICENSE](LICENSE).
-
-## Contact
-
-**Adrien Leguillou**  
-Research Engineer — LETG, Université de Bretagne Occidentale  
+Le Guillou, A. (2026). SemanticSeg4EO: An Open-source unified framework and QGIS Plugin for Semantic Segmentation in Earth Observation. SoftwareX (Submitted).
+Contact
+Adrien Le Guillou - Research Engineer
+LETG, Université de Bretagne Occidentale
 📧 adrien.leguillou@univ-brest.fr
 
-## Related
 
-[SemanticSeg4EO standalone framework](https://github.com/aleguillou1/SemanticSeg4EO) — the same training and prediction scripts usable outside QGIS.
