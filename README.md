@@ -83,8 +83,15 @@ pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
 # Install remaining dependencies
 pip install -r requirements_external.txt
 ```
+
+or use Environnement.yaml (CPU) / Environnement_GPU (for GPU) : 
+
+```bash
+conda env create -f environment.yml (or environnement_GPU
+conda activate semanticseg4eo
+```
+
 Important: Always install PyTorch first to match your specific hardware (CPU or CUDA version). Check pytorch.org for the correct command.
-3. Connect the Plugin
 
 3. Connect the Plugin
 Open SemanticSeg4EO in QGIS
