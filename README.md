@@ -87,7 +87,7 @@ pip install -r requirements_external.txt
 or use Environnement.yaml (CPU) / Environnement_GPU (for GPU) : 
 
 ```bash
-conda env create -f environment.yml (or environnement_GPU
+conda env create -f environment.yml (or environnement_GPU.yml)
 conda activate semanticseg4eo
 ```
 
