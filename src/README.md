@@ -260,6 +260,7 @@ By using an external environment:
 
 ## License
 
+This project is now licensed under the GPL v2. Original components remain under their respective MIT licenses where noted.
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation; either version 2 of the License.
