@@ -16,6 +16,17 @@ v3.0 - Added:
   - 15+ loss functions with auto-conversion
   - Advanced parameters tab (AMP, warmup, dropout, focal/tversky params)
   - Prediction: encoder selection, batch inference, gaussian blending
+
+  Copyright (c) 2026 Le Guillou Adrien
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
 """
 
 import os
