@@ -15,6 +15,19 @@ Batch mode naming convention:
     Images: Image_1.tif, Image_2.tif, ...  (or image_1.tif, custom patterns)
     Labels: Label_1.tif, Label_2.tif, ...  (or label_1.tif, custom patterns)
     Grids:  Grid_1.shp, Grid_2.shp, ...   (optional per-image grids)
+
+     Copyright (c) 2026 Le Guillou Adrien
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+"""
+
 """
 
 import os
